@@ -1,0 +1,14 @@
+var express = require('express');
+var router = express.Router();
+
+
+router.get('/', function(req, res, next) {
+  res.sendFile('index.html', { root: 'views' });
+});
+
+router.get('/results', function(req, res, next) {
+  res.sendFile('results.html', { root: 'views' });
+});
+
+
+module.exports = router;
